@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>E-Shop Checkout</title>
+    <style>
+      .error {
+        color: red;
+      }
+      #pay-now {
+        background-color: green;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>E-Shop Checkout</h1>
+
+    <section id="products">
+      <h2>Products</h2>
+      <div class="product">
+        <span class="product-name">T-Shirt</span>
+        <span class="product-price" data-price="20">₹20.00</span>
+        <button class="add-to-cart" data-product-id="1">Add to Cart</button>
+      </div>
+      <div class="product">
+        <span class="product-name">Jeans</span>
+        <span class="product-price" data-price="40">₹40.00</span>
+        <button class="add-to-cart" data-product-id="2">Add to Cart</button>
+      </div>
+    </section>
+
+    <section id="cart">
+      <h2>Cart Summary</h2>
+      <label>Quantity:
+        <input id="item-qty" type="number" min="1" value="1" />
+      </label>
+      <p>Total: <span id="total-price">₹0.00</span></p>
+
+      <label for="discount-code">Discount Code:</label>
+      <input id="discount-code" type="text" />
+      <button id="apply-discount">Apply</button>
+      <p id="discount-message" class="error"></p>
+    </section>
+
+    <section id="user-details">
+      <h2>User Details</h2>
+      <form id="checkout-form">
+        <label>Name:
+          <input id="name" name="name" type="text" required />
+        </label>
+        <span id="name-error" class="error"></span><br />
+
+        <label>Email:
+          <input id="email" name="email" type="email" required />
+        </label>
+        <span id="email-error" class="error"></span><br />
+
+        <label>Address:
+          <input id="address" name="address" type="text" required />
+        </label>
+        <span id="address-error" class="error"></span><br />
+
+        <h3>Shipping Method</h3>
+        <label><input type="radio" name="shipping" value="standard" checked />Standard</label>
+        <label><input type="radio" name="shipping" value="express" />Express</label>
+
+        <h3>Payment Method</h3>
+        <label><input type="radio" name="payment" value="card" checked />Credit Card</label>
+        <label><input type="radio" name="payment" value="paypal" />PayPal</label>
+
+        <button id="pay-now" type="submit">Pay Now</button>
+        <p id="payment-status"></p>
+      </form>
+    </section>
+
+    <script>
+      // NOTE: You can implement simple JS logic for totals & validation to
+      // support realistic Selenium tests. Keep it simple.
+    </script>
+  </body>
+</html>

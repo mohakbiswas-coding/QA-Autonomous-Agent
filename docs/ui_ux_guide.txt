@@ -1,0 +1,7 @@
+UI / UX Guidelines
+
+- Form validation errors must be displayed in red text.
+- Required fields: Name, Email, Address.
+- The "Pay Now" button should be green.
+- When an invalid email is entered, an inline error message should appear near the email field.
+- The discount application message should be displayed in the cart section.
